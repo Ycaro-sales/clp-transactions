@@ -1,0 +1,13 @@
+services:
+  database:
+    container_name: transactions
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: root
+      POSTGRES_DB: transactions_db_development
+    volumes:
+      - ./tmp/db:/var/lib/postgresql/data
+    ports:
+      - '5432:5432'
