@@ -192,6 +192,9 @@ GEM
     rainbow (3.1.1)
     rake (13.2.1)
     rbs (2.8.4)
+    rbs_rails (0.12.0)
+      parser
+      rbs (>= 1)
     rdoc (6.7.0)
       psych (>= 4.0.0)
     regexp_parser (2.9.2)
@@ -276,6 +279,8 @@ DEPENDENCIES
   pg (~> 1.1)
   puma (>= 5.0)
   rails (~> 7.2.1, >= 7.2.1.2)
+  rbs
+  rbs_rails
   rubocop-rails-omakase
   solargraph
   tzinfo-data

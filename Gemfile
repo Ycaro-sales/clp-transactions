@@ -41,3 +41,5 @@ group :development, :test do
 end
 
 gem "solargraph", group: :development
+gem "rbs_rails", require: false
+gem "rbs"
