@@ -10,9 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2024_10_27_235801) do
+ActiveRecord::Schema[7.2].define(version: 2024_10_30_012143) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "accounts", force: :cascade do |t|
+    t.boolean "is_third_party"
+    t.float "balance", default: 0.0
+    t.bigint "user_id"
+    t.index ["user_id"], name: "index_accounts_on_user_id"
+  end
 
   create_table "transfers", force: :cascade do |t|
     t.string "institution"
@@ -29,12 +36,12 @@ ActiveRecord::Schema[7.2].define(version: 2024_10_27_235801) do
 
   create_table "users", force: :cascade do |t|
     t.string "name"
-    t.float "balance"
     t.integer "cpf"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "transfers", "users", column: "receiver_id"
-  add_foreign_key "transfers", "users", column: "sender_id"
+  add_foreign_key "accounts", "users"
+  add_foreign_key "transfers", "accounts", column: "receiver_id"
+  add_foreign_key "transfers", "accounts", column: "sender_id"
 end
