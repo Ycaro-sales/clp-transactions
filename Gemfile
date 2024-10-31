@@ -43,3 +43,6 @@ end
 gem "solargraph", group: :development
 gem "rbs_rails", require: false
 gem "rbs"
+gem "jbuilder"
+gem "jwt"
+gem "bcrypt", "~> 3.1.7"

@@ -38,81 +38,45 @@ class Transfer < ::ApplicationRecord
 
     def clear_id_change: () -> void
 
-    def institution: () -> String?
+    def transfer_type: () -> String
 
-    def institution=: (String?) -> String?
+    def transfer_type=: (String) -> String
 
-    def institution?: () -> bool
+    def transfer_type?: () -> bool
 
-    def institution_changed?: () -> bool
+    def transfer_type_changed?: () -> bool
 
-    def institution_change: () -> [ String?, String? ]
+    def transfer_type_change: () -> [ String?, String? ]
 
-    def institution_will_change!: () -> void
+    def transfer_type_will_change!: () -> void
 
-    def institution_was: () -> String?
+    def transfer_type_was: () -> String?
 
-    def institution_previously_changed?: () -> bool
+    def transfer_type_previously_changed?: () -> bool
 
-    def institution_previous_change: () -> Array[String?]?
+    def transfer_type_previous_change: () -> Array[String?]?
 
-    def institution_previously_was: () -> String?
+    def transfer_type_previously_was: () -> String?
 
-    def institution_before_last_save: () -> String?
+    def transfer_type_before_last_save: () -> String?
 
-    def institution_change_to_be_saved: () -> Array[String?]?
+    def transfer_type_change_to_be_saved: () -> Array[String?]?
 
-    def institution_in_database: () -> String?
+    def transfer_type_in_database: () -> String?
 
-    def saved_change_to_institution: () -> Array[String?]?
+    def saved_change_to_transfer_type: () -> Array[String?]?
 
-    def saved_change_to_institution?: () -> bool
+    def saved_change_to_transfer_type?: () -> bool
 
-    def will_save_change_to_institution?: () -> bool
+    def will_save_change_to_transfer_type?: () -> bool
 
-    def restore_institution!: () -> void
+    def restore_transfer_type!: () -> void
 
-    def clear_institution_change: () -> void
+    def clear_transfer_type_change: () -> void
 
-    def type: () -> String?
+    def value: () -> Float
 
-    def type=: (String?) -> String?
-
-    def type?: () -> bool
-
-    def type_changed?: () -> bool
-
-    def type_change: () -> [ String?, String? ]
-
-    def type_will_change!: () -> void
-
-    def type_was: () -> String?
-
-    def type_previously_changed?: () -> bool
-
-    def type_previous_change: () -> Array[String?]?
-
-    def type_previously_was: () -> String?
-
-    def type_before_last_save: () -> String?
-
-    def type_change_to_be_saved: () -> Array[String?]?
-
-    def type_in_database: () -> String?
-
-    def saved_change_to_type: () -> Array[String?]?
-
-    def saved_change_to_type?: () -> bool
-
-    def will_save_change_to_type?: () -> bool
-
-    def restore_type!: () -> void
-
-    def clear_type_change: () -> void
-
-    def value: () -> Float?
-
-    def value=: (Float?) -> Float?
+    def value=: (Float) -> Float
 
     def value?: () -> bool
 
@@ -218,9 +182,9 @@ class Transfer < ::ApplicationRecord
 
     def clear_receiver_id_change: () -> void
 
-    def date: () -> Date?
+    def date: () -> Date
 
-    def date=: (Date?) -> Date?
+    def date=: (Date) -> Date
 
     def date?: () -> bool
 
@@ -328,23 +292,38 @@ class Transfer < ::ApplicationRecord
   end
   include GeneratedAttributeMethods
 
-  def sender: () -> User
-  def sender=: (User?) -> User?
-  def reload_sender: () -> User?
-  def build_sender: (untyped) -> User
-  def create_sender: (untyped) -> User
-  def create_sender!: (untyped) -> User
-  def receiver: () -> User
-  def receiver=: (User?) -> User?
-  def reload_receiver: () -> User?
-  def build_receiver: (untyped) -> User
-  def create_receiver: (untyped) -> User
-  def create_receiver!: (untyped) -> User
+  def sender: () -> Account
+  def sender=: (Account?) -> Account?
+  def reload_sender: () -> Account?
+  def build_sender: (untyped) -> Account
+  def create_sender: (untyped) -> Account
+  def create_sender!: (untyped) -> Account
+  def receiver: () -> Account
+  def receiver=: (Account?) -> Account?
+  def reload_receiver: () -> Account?
+  def build_receiver: (untyped) -> Account
+  def create_receiver: (untyped) -> Account
+  def create_receiver!: (untyped) -> Account
   module GeneratedAssociationMethods
   end
   include GeneratedAssociationMethods
 
+  def pix!: () -> bool
+  def pix?: () -> bool
+  def ted!: () -> bool
+  def ted?: () -> bool
+  def doc!: () -> bool
+  def doc?: () -> bool
+  def self.pix: () -> ActiveRecord_Relation
+  def self.ted: () -> ActiveRecord_Relation
+  def self.doc: () -> ActiveRecord_Relation
+
   module GeneratedRelationMethods
+    def pix: () -> ActiveRecord_Relation
+
+    def ted: () -> ActiveRecord_Relation
+
+    def doc: () -> ActiveRecord_Relation
   end
 
   class ActiveRecord_Relation < ::ActiveRecord::Relation

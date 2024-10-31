@@ -1,3 +1,0 @@
-#!/usr/bin/bash
-
-psql postgresql://root:root@localhost:5432/transactions_db_development

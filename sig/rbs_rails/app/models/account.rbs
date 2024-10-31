@@ -1,0 +1,150 @@
+class Account < ::ApplicationRecord
+  extend _ActiveRecord_Relation_ClassMethods[Account, ActiveRecord_Relation, Integer]
+
+  module GeneratedAttributeMethods
+    def id: () -> Integer
+
+    def id=: (Integer) -> Integer
+
+    def id?: () -> bool
+
+    def id_changed?: () -> bool
+
+    def id_change: () -> [ Integer?, Integer? ]
+
+    def id_will_change!: () -> void
+
+    def id_was: () -> Integer?
+
+    def id_previously_changed?: () -> bool
+
+    def id_previous_change: () -> Array[Integer?]?
+
+    def id_previously_was: () -> Integer?
+
+    def id_before_last_save: () -> Integer?
+
+    def id_change_to_be_saved: () -> Array[Integer?]?
+
+    def id_in_database: () -> Integer?
+
+    def saved_change_to_id: () -> Array[Integer?]?
+
+    def saved_change_to_id?: () -> bool
+
+    def will_save_change_to_id?: () -> bool
+
+    def restore_id!: () -> void
+
+    def clear_id_change: () -> void
+
+    def user_id: () -> Integer?
+
+    def user_id=: (Integer?) -> Integer?
+
+    def user_id?: () -> bool
+
+    def user_id_changed?: () -> bool
+
+    def user_id_change: () -> [ Integer?, Integer? ]
+
+    def user_id_will_change!: () -> void
+
+    def user_id_was: () -> Integer?
+
+    def user_id_previously_changed?: () -> bool
+
+    def user_id_previous_change: () -> Array[Integer?]?
+
+    def user_id_previously_was: () -> Integer?
+
+    def user_id_before_last_save: () -> Integer?
+
+    def user_id_change_to_be_saved: () -> Array[Integer?]?
+
+    def user_id_in_database: () -> Integer?
+
+    def saved_change_to_user_id: () -> Array[Integer?]?
+
+    def saved_change_to_user_id?: () -> bool
+
+    def will_save_change_to_user_id?: () -> bool
+
+    def restore_user_id!: () -> void
+
+    def clear_user_id_change: () -> void
+
+    def institution: () -> String
+
+    def institution=: (String) -> String
+
+    def institution?: () -> bool
+
+    def institution_changed?: () -> bool
+
+    def institution_change: () -> [ String?, String? ]
+
+    def institution_will_change!: () -> void
+
+    def institution_was: () -> String?
+
+    def institution_previously_changed?: () -> bool
+
+    def institution_previous_change: () -> Array[String?]?
+
+    def institution_previously_was: () -> String?
+
+    def institution_before_last_save: () -> String?
+
+    def institution_change_to_be_saved: () -> Array[String?]?
+
+    def institution_in_database: () -> String?
+
+    def saved_change_to_institution: () -> Array[String?]?
+
+    def saved_change_to_institution?: () -> bool
+
+    def will_save_change_to_institution?: () -> bool
+
+    def restore_institution!: () -> void
+
+    def clear_institution_change: () -> void
+  end
+  include GeneratedAttributeMethods
+  def sent_transfers: () -> Transfer::ActiveRecord_Associations_CollectionProxy
+  def sent_transfers=: (Transfer::ActiveRecord_Associations_CollectionProxy | Array[Transfer]) -> (Transfer::ActiveRecord_Associations_CollectionProxy | Array[Transfer])
+  def sent_transfer_ids: () -> Array[Integer]
+  def sent_transfer_ids=: (Array[Integer]) -> Array[Integer]
+  def received_transfers: () -> Transfer::ActiveRecord_Associations_CollectionProxy
+  def received_transfers=: (Transfer::ActiveRecord_Associations_CollectionProxy | Array[Transfer]) -> (Transfer::ActiveRecord_Associations_CollectionProxy | Array[Transfer])
+  def received_transfer_ids: () -> Array[Integer]
+  def received_transfer_ids=: (Array[Integer]) -> Array[Integer]
+  def pix_keys: () -> PixKey::ActiveRecord_Associations_CollectionProxy
+  def pix_keys=: (PixKey::ActiveRecord_Associations_CollectionProxy | Array[PixKey]) -> (PixKey::ActiveRecord_Associations_CollectionProxy | Array[PixKey])
+  def pix_key_ids: () -> Array[Integer]
+  def pix_key_ids=: (Array[Integer]) -> Array[Integer]
+
+  def user: () -> User
+  def user=: (User?) -> User?
+  def reload_user: () -> User?
+  def build_user: (untyped) -> User
+  def create_user: (untyped) -> User
+  def create_user!: (untyped) -> User
+  module GeneratedAssociationMethods
+  end
+  include GeneratedAssociationMethods
+
+  module GeneratedRelationMethods
+  end
+
+  class ActiveRecord_Relation < ::ActiveRecord::Relation
+    include GeneratedRelationMethods
+    include _ActiveRecord_Relation[Account, Integer]
+    include Enumerable[Account]
+  end
+
+  class ActiveRecord_Associations_CollectionProxy < ::ActiveRecord::Associations::CollectionProxy
+    include GeneratedRelationMethods
+    include _ActiveRecord_Relation[Account, Integer]
+  end
+end

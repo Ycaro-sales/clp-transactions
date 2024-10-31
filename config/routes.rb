@@ -6,5 +6,15 @@ Rails.application.routes.draw do
   get "up" => "rails/health#show", as: :rails_health_check
 
   # Defines the root path route ("/")
-  # root "posts#index"
+  post   "transfer/pix/:pix_key",         to: "transfers#transfer_pix"
+  post   "transfer/doc",                  to: "transfers#transfer_ted"
+  post   "transfer/ted",                  to: "transfers#transfer_doc"
+
+  get    "transfers/",            to: "transfers#user_transfers_list"
+  get    "transfers/:id",         to: "transfers#user_transfers_show"
+  get    "transfers/:id/receipt", to: "transfers#get_transfer_receipt"
+
+  get    "admin/transfers/",    to: "transfers#list"
+  get    "admin/transfers/:id", to: "transfers#show"
+  delete "admin/transfers/:id", to: "transfers#delete"
 end

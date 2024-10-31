@@ -1,0 +1,102 @@
+class PixKeys < ::ApplicationRecord
+  extend _ActiveRecord_Relation_ClassMethods[PixKeys, ActiveRecord_Relation, String]
+
+  module GeneratedAttributeMethods
+    def key: () -> String
+
+    def key=: (String) -> String
+
+    def key?: () -> bool
+
+    def key_changed?: () -> bool
+
+    def key_change: () -> [ String?, String? ]
+
+    def key_will_change!: () -> void
+
+    def key_was: () -> String?
+
+    def key_previously_changed?: () -> bool
+
+    def key_previous_change: () -> Array[String?]?
+
+    def key_previously_was: () -> String?
+
+    def key_before_last_save: () -> String?
+
+    def key_change_to_be_saved: () -> Array[String?]?
+
+    def key_in_database: () -> String?
+
+    def saved_change_to_key: () -> Array[String?]?
+
+    def saved_change_to_key?: () -> bool
+
+    def will_save_change_to_key?: () -> bool
+
+    def restore_key!: () -> void
+
+    def clear_key_change: () -> void
+
+    def account_id: () -> Integer
+
+    def account_id=: (Integer) -> Integer
+
+    def account_id?: () -> bool
+
+    def account_id_changed?: () -> bool
+
+    def account_id_change: () -> [ Integer?, Integer? ]
+
+    def account_id_will_change!: () -> void
+
+    def account_id_was: () -> Integer?
+
+    def account_id_previously_changed?: () -> bool
+
+    def account_id_previous_change: () -> Array[Integer?]?
+
+    def account_id_previously_was: () -> Integer?
+
+    def account_id_before_last_save: () -> Integer?
+
+    def account_id_change_to_be_saved: () -> Array[Integer?]?
+
+    def account_id_in_database: () -> Integer?
+
+    def saved_change_to_account_id: () -> Array[Integer?]?
+
+    def saved_change_to_account_id?: () -> bool
+
+    def will_save_change_to_account_id?: () -> bool
+
+    def restore_account_id!: () -> void
+
+    def clear_account_id_change: () -> void
+  end
+  include GeneratedAttributeMethods
+
+  def account: () -> Account
+  def account=: (Account?) -> Account?
+  def reload_account: () -> Account?
+  def build_account: (untyped) -> Account
+  def create_account: (untyped) -> Account
+  def create_account!: (untyped) -> Account
+  module GeneratedAssociationMethods
+  end
+  include GeneratedAssociationMethods
+
+  module GeneratedRelationMethods
+  end
+
+  class ActiveRecord_Relation < ::ActiveRecord::Relation
+    include GeneratedRelationMethods
+    include _ActiveRecord_Relation[PixKeys, String]
+    include Enumerable[PixKeys]
+  end
+
+  class ActiveRecord_Associations_CollectionProxy < ::ActiveRecord::Associations::CollectionProxy
+    include GeneratedRelationMethods
+    include _ActiveRecord_Relation[PixKeys, String]
+  end
+end
