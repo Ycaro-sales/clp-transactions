@@ -4,6 +4,10 @@ interface _RbsRailsPathHelpers
   def rails_info_routes_path: (*untyped) -> String
   def rails_info_path: (*untyped) -> String
   def rails_health_check_path: (*untyped) -> String
+  def transfer_doc_path: (*untyped) -> String
+  def transfer_ted_path: (*untyped) -> String
+  def transfers_path: (*untyped) -> String
+  def admin_transfers_path: (*untyped) -> String
   def rails_postmark_inbound_emails_path: (*untyped) -> String
   def rails_relay_inbound_emails_path: (*untyped) -> String
   def rails_sendgrid_inbound_emails_path: (*untyped) -> String
@@ -33,6 +37,10 @@ interface _RbsRailsPathHelpers
   def rails_info_routes_url: (*untyped) -> String
   def rails_info_url: (*untyped) -> String
   def rails_health_check_url: (*untyped) -> String
+  def transfer_doc_url: (*untyped) -> String
+  def transfer_ted_url: (*untyped) -> String
+  def transfers_url: (*untyped) -> String
+  def admin_transfers_url: (*untyped) -> String
   def rails_postmark_inbound_emails_url: (*untyped) -> String
   def rails_relay_inbound_emails_url: (*untyped) -> String
   def rails_sendgrid_inbound_emails_url: (*untyped) -> String

@@ -7,11 +7,11 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   post   "transfer/pix/:pix_key",         to: "transfers#transfer_pix"
+  post   "transfer/create_pixkey",        to: "transfers#create_pixkey"
   post   "transfer/doc",                  to: "transfers#transfer_ted"
   post   "transfer/ted",                  to: "transfers#transfer_doc"
 
   get    "transfers/",            to: "transfers#user_transfers_list"
-  get    "transfers/:id",         to: "transfers#user_transfers_show"
   get    "transfers/:id/receipt", to: "transfers#get_transfer_receipt"
 
   get    "admin/transfers/",    to: "transfers#list"
